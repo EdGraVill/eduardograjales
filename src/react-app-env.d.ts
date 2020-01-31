@@ -2,14 +2,29 @@
 
 interface PostPreview {
   title: string;
-  id: string;
+  id: number;
   description: string;
-  date: Date;
 }
 
 interface Post {
   title: string;
-  id: string;
+  id: number;
   content: string;
-  date: Date;
+}
+
+interface GithubContentResponse {
+  name: string;
+  path: string;
+  sha: string;
+  size: number;
+  url: string;
+  html_url: string;
+  git_url: string;
+  download_url: string;
+  type: 'file' | 'dir';
+  _links: {
+      self: string;
+      git: string;
+      html: string;
+  }
 }
